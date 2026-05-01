@@ -1,0 +1,12 @@
+{
+  "name": "BioGarden",
+  "description": "An intelligent gardening assistant that identifies plants from photos and provides personalized care guides, including light, water, and soil requirements.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "AI-powered plant identification",
+    "Comprehensive care instructions",
+    "Visual plant diagnosis"
+  ]
+}

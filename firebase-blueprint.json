@@ -1,0 +1,44 @@
+{
+  "entities": {
+    "PlantCollection": {
+      "title": "Plant Collection",
+      "description": "User's collection of plants",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "name": { "type": "string" },
+        "scientificName": { "type": "string" },
+        "description": { "type": "string" },
+        "image": { "type": "string" },
+        "care": {
+           "type": "object",
+           "properties": {
+             "watering": { "type": "string" },
+             "light": { "type": "string" },
+             "soil": { "type": "string" },
+             "humidity": { "type": "string" },
+             "temperature": { "type": "string" }
+           }
+        },
+        "diagnosisHistory": {
+           "type": "array",
+           "items": { "type": "object" }
+        },
+        "wateringHistory": {
+           "type": "array",
+           "items": { "type": "string" }
+        },
+        "lastWatered": { "type": "string" },
+        "generalTips": { "type": "array", "items": { "type": "string" } },
+        "notes": { "type": "string" }
+      },
+      "required": ["userId", "name", "image"]
+    }
+  },
+  "firestore": {
+    "collections": {
+      "schema": "PlantCollection",
+      "description": "User specific plant records"
+    }
+  }
+}
